@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/ausdream-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="Ausdream">
+    {% stylesheet application %}
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="front no-trans">
+    <div class="scrollToTop"><i class="fa fa-chevron-up"></i></div>
+    <div class="page-wrapper">
+      <header class="header fixed header-small clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="header-left clearfix">
+                <div class="logo"><a href="{{ site.url }}"><img id="logo" src="/images/assets/ausdream-logo.png" alt="AUSDREAM Logo"></a></div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="header-right clearfix">
+                <div class="main-navigation animated">
+                  <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li class="{% if page.category == 'home' %}active{% endif %}"><a href="{{ site.url }}">HOME</a></li>
+                          <li class="{% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/">ABOUT</a></li>
+                          <li class="{% if page.category == 'current-project' %}dropdown active{% else %}dropdown{% endif %}">
+                            <a class="dropdown-toggle" data-toggle="dropdown">CURRENT PROJECT</a>
+                            <ul class="dropdown-menu">
+                              <li><a href="{{ site.url-sunnybank-hills }}" target="_blank">Sunnybank Hills</a></li>
+                              <li><a href="{{ site.url }}/pimpama/">Pimpama</a></li>
+                              <li><a href="{{ site.url }}/anna-bay/">Anna Bay</a></li>
+                            </ul>
+                          </li>
+                          
+                          <li class="{% if page.category == 'partners' %}active{% endif %}"><a href="{{ site.url }}/partners/">PARTNERS</a></li>
+                          <li class="{% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">CONTACT</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      {{ content }}
+      <footer id="footer">
+        <div class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="footer-content">
+                  <div class="logo-footer"><img id="logo-footer" src="/images/assets/ausdream-logo.png" alt="AUSDREAM Logo" width="247" height="50"></div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p>AUSDREAM is a property group with broad access to capital invested in quality assets and development projects which, through proactive management, creates great customer experiences and superior returns.</p>
+                      <ul class="social-links circle">
+                        <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                        <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                        <li class="weixin"><a class="popup-img-single" href="/images/assets/weixin.jpg"><i class="fa fa-weixin"></i></a></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <ul class="list-icons">
+                        <li><i class="fa fa-map-marker pr-10"></i>QLD office: 145 Pinelands Road, Sunnybank Hills QLD 4109 Australia</li>
+                        <li><i class="fa fa-map-marker pr-10"></i>NSW office: level 65 MLC Centre 19 Martin Place, Sydney 4/15 Childs Road, Chipping Norton, NSW 2170</li>
+                        <li><i class="fa fa-phone pr-10"></i>+04 3338 9395</li>
+                        <li><i class="fa fa-envelope-o pr-10"></i><a href="mailto:info@ausdreamproperty.com‍">info@ausdreamproperty.com‍</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="{{ site.url }}/about/" class="link"><span>Read More</span></a>
+                </div>
+              </div>
+              <div class="space-bottom hidden-lg hidden-xs"></div>
+              <div class="col-sm-6 col-md-2">
+                <div class="footer-content">
+                  <h2>Sitemap</h2>
+                  <nav>
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="{{ site.url }}">HOME</a></li>
+                      <li><a href="{{ site.url }}/about/">ABOUT</a></li>
+                      <li><a href="{{ site.url }}/partners/">PARTNERS</a></li>
+                      <li><a href="{{ site.url }}/contact/">CONTACT</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="footer-content">
+                  <h2>Current Project</h2>
+                  <nav>
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="{{ site.url-sunnybank-hills }}" target="_blank">Sunnybank Hills</a></li>
+                      <li><a href="{{ site.url }}/pimpama/">Pimpama</a></li>
+                      <li><a href="{{ site.url }}/anna-bay/">Anna Bay</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="space-bottom hidden-lg hidden-xs"></div>
+          </div>
+        </div>
+        <div class="subfooter">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6"><p>Copyright © 2014-2018 AUSDREAM INC | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p></div>
+              <div class="col-md-6"><p align="right">Website design by <a href="https://gdky.net" target="_blank">OSW</a></p></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    {% javascript application %}
+  </body>
+</html>

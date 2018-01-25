@@ -1,0 +1,135 @@
+---
+layout: default
+category: home
+full_title: AUSDREAM
+---
+<div class="col-md-12">
+  <div class="row">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active"><img src="/images/home/billboard-1.jpg" alt="AUSDREAM"></div>
+        <div class="item active"><img src="/images/home/billboard-2.jpg" alt="AUSDREAM"></div>
+        <div class="item active"><img src="/images/home/billboard-3.jpg" alt="AUSDREAM"></div>
+        <div class="item active"><img src="/images/home/billboard-4.jpg" alt="AUSDREAM"></div>
+        <div class="item active"><img src="/images/home/billboard-5.jpg" alt="AUSDREAM"></div>
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </div>
+  </div>
+</div>
+<div class="section clearfix gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+		<h1 class="text-center">AUSDREAM</h1>
+		<div class="separator"></div>
+		<br>
+		<div class="row">
+		  <div class="col-md-6">
+		    <div class="row">
+		      <div class="col-md-6"><img src="/images/home/about.png" alt="AUSDREAM LOGO"></div>
+		      <div class="col-md-6"><p>AUSDREAM is a property group with broad access to capital invested in quality assets and development projects which, through proactive management, creates great customer experiences and superior returns.</p></div>
+		    </div>
+			<p>AUSDREAM PROPERTY is a development company engaged in land acquisition, design, construction, and sales of medium to high density luxury residential townhouses & apartments & mixed use spaces in the Brisbane & Gold Coast area of Queensland Australia.</p>
+			<a href="{{ site.url }}/about/" class="btn btn-white">Learn More</a>
+			<div class="space hidden-md hidden-lg"></div>
+		  </div>
+		  <div class="col-md-6">
+		    <div class="panel-group" id="accordion">
+		      <div class="panel panel-default">
+		        <div class="panel-heading">
+		          <h4 class="panel-title">
+		            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-check"></i>Property Development and Investment</a>
+		          </h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+				  <div class="panel-body"></div>
+				</div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed"><i class="fa fa-check"></i>Professional Planning and Material Providing</a></h4>
+			    </div>
+			    <div id="collapseTwo" class="panel-collapse collapse">
+			      <div class="panel-body"></div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"><i class="fa fa-check"></i>Advisory</a></h4>
+			    </div>
+			    <div id="collapseThree" class="panel-collapse collapse">
+			      <div class="panel-body"></div>
+			    </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+<div class="section clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Current Project</h2>
+        <div class="separator-2"></div>
+        <div class="space-bottom"></div>
+		<div class="row">
+		  <div class="col-md-4">
+		    <div class="image-box mb-20 object-non-visible">
+		      <div class="overlay-container"><img src="/images/home/sunnybank-hills.jpg" alt="Sunnybank Hills"></div>
+		      <div class="image-box-body">
+		        <h3 class="title">Sunnybank Hills</h3>
+		        <a href="{{ site.url-sunnybank-hills }}" target="_blank" class="link"><span>Read More</span></a>
+		      </div>
+		    </div>
+		  </div>{% for post in site.categories["pimpama"] %}
+		  <div class="col-md-4">
+		    <div class="image-box mb-20 object-non-visible" data-animation-effect="fadeInLeft" data-effect-delay="300">
+		      <div class="overlay-container"><img src="/images/project/{{ post.image }}.jpg" alt="{{ post.title }}"></div>
+		      <div class="image-box-body">
+		        <h3 class="title">{{ post.title }}</h3>
+		        <a href="{{ site.url }}{{ post.url }}" class="link"><span>Read More</span></a>
+		      </div>
+		    </div>
+		  </div>{% endfor %}{% for post in site.categories["anna-bay"] %}
+		  <div class="col-md-4">
+		    <div class="image-box mb-20 object-non-visible" data-animation-effect="fadeInLeft" data-effect-delay="300">
+		      <div class="overlay-container"><img src="/images/project/{{ post.image }}.jpg" alt="{{ post.title }}"></div>
+		      <div class="image-box-body">
+		        <h3 class="title">{{ post.title }}</h3>
+		        <a href="{{ site.url }}{{ post.url }}" class="link"><span>Read More</span></a>
+		      </div>
+		    </div>
+		  </div>{% endfor %}
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+<div class="section gray-bg text-muted footer-top clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="owl-carousel clients">
+          <div class="client"><img src="/images/partners/wolter.png" alt="Wolter Consulting Group"></div>
+          <div class="client"><img src="/images/partners/ttm.png" alt="TTM"></div>
+          <div class="client"><img src="/images/partners/crisp.png" alt="crisp"></div>
+          <div class="client"><img src="/images/partners/intelara.png" alt="intelara"></div>
+          <div class="client"><img src="/images/partners/l56d.png" alt="l56d"></div>
+          <div class="client"><img src="/images/partners/saundershavill.png" alt="saundershavill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

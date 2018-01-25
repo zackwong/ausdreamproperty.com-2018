@@ -1,0 +1,22 @@
+---
+layout: pages-nav
+permalink: /anna-bay/
+category: current-project
+title: Anna Bay
+---
+<section class="main-container gray-bg">
+  <div class="container">
+    <div class="row grid-space-10">{% for post in site.categories["anna-bay"] %}
+      <div class="col-sm-6 col-md-4">
+        <div class="box-style-1 white-bg">
+          <div class="overlay-container">
+            <img src="/images/project/{{ post.image }}.jpg" alt="{{ post.title }}">
+            <a href="{{ site.url }}{{ post.url }}" class="overlay small"><i class="fa fa-search"></i></a>
+          </div>
+          <h3>{{ post.title }}</h3>
+          <a href="{{ site.url }}{{ post.url }}" class="btn btn-default">Read More</a>
+        </div>
+      </div>{% endfor %}
+    </div>
+  </div>
+</section>
